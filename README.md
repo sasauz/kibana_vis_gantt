@@ -7,3 +7,6 @@ You can just copy the gantt_vis folder into KIBANA_HOME/src/plugins and run kiba
 # Support
 Kibana 5.6.x
 
+# Based on
+http://visjs.org/
+
