@@ -2,7 +2,7 @@
 Kibana Plugin Gantt Chart
 
 # Install
-You can just copy the gantt_vis folder into KIBANA_HOME/src/plugins and run kibana
+You can just copy the gantt_vis folder into KIBANA_HOME/plugins and run kibana
 
 # How to use
 1. You should define start and end points.
