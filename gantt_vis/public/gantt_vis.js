@@ -93,7 +93,7 @@ function GanttVisProvider(Private) {
         group: 'buckets',
         name: 'itembucket',
         title: 'Item Content',
-		min: 1,
+		min: 0,
 		max: 1,
         aggFilter: [
 		  'terms',
