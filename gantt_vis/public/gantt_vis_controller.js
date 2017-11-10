@@ -108,7 +108,7 @@ module.controller('KbnGanttVisController', function ($scope, $element, Private) 
 			end: new Date(maxEnd + (maxEnd-minStart)/10),
 			verticalScroll: true,
 			//zoomKey: 'ctrlKey',
-			stack: false
+			stack: true
 		};
       
 
