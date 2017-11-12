@@ -22,8 +22,11 @@ Nodejs will add dependeces into folder node_modules inside of gannt_vis
 ```
 
 # Offline-Install
-I will add in next days dependencies in order to run it without npm
-
+```
+1. copy the gantt_vis folder into KIBANA_HOME/plugins
+2. copy node_modules folder from "offline" folder into KIBANA_HOME/plugins/gantt_vis
+3. run kibana
+```
 # How to use
 1. You should define start and end points.
 2. Item is what will be shown in Gantt chart
