@@ -11,14 +11,17 @@ uiModules.get('kibana/gantt_vis')
       restrict: 'E',
       template: ganttVisParamsTemplate,
       link: function ($scope) {
-	/*
+	
         $scope.$watchMulti([
           'vis.params.stacked',
 		  'vis.params.autoresize',		  
-		  'vis.params.verticalscroll'
+		  'vis.params.verticalscroll',
+		  'vis.params.chheigh',
+		  'vis.params.movable',
+		  'vis.params.zoomable'
         ], function () {
           if (!$scope.vis) return;
-        });*/
+        });
       }
     };
   });

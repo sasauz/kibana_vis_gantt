@@ -101,14 +101,25 @@ module.controller('KbnGanttVisController', function ($scope, $element, Private) 
           });
         }
       });
+	  
+	  if (vis.params.stacked === undefined) {vis.params.stacked = false;}
+	  if (vis.params.autoresize === undefined) {vis.params.autoresize = false;}
+	  if (vis.params.verticalscroll === undefined) {vis.params.verticalscroll = false;}
+	  if (vis.params.movable === undefined) {vis.params.movable = false;}
+	  if (vis.params.zoomable === undefined) {vis.params.zoomable = false;}
+	  	  
 	  	var options = {
-			autoResize: true,
+			autoResize: vis.params.autoresize,
 			locale: "de",
 			start: new Date(minStart - (maxEnd-minStart)/10),
 			end: new Date(maxEnd + (maxEnd-minStart)/10),
-			verticalScroll: true,
+			verticalScroll: vis.params.verticalscroll,
+			clickToUse: false,
+			height: vis.params.chheigh == 0 ? vis.params.chheigh : vis.params.chheigh + 'px',
 			//zoomKey: 'ctrlKey',
-			stack: true
+			stack: vis.params.stacked,
+			moveable: vis.params.movable,
+			zoomable: vis.params.zoomable
 		};
       
 
@@ -151,7 +162,7 @@ module.controller('KbnGanttVisController', function ($scope, $element, Private) 
         width = width - margin.left - margin.right;
         height = height - margin.top - margin.bottom;
 
-        graph.setSize(width + 'px', height + 'px');
+        //graph.setSize(width + 'px', height + 'px');
 		graph.redraw();
       }
     }

@@ -1,13 +1,23 @@
 <div ng-controller="ganttVisParams">
-	<!--<label>Stack the items </label>
+	<label>Stack the items </label>
 	<input type="checkbox" ng-model="vis.params.stacked" checked/>
 	<br />
+	<label>Timeline movable </label>
+	<input type="checkbox" ng-model="vis.params.movable" checked/>
+	<br />
+	<label>Timeline zoomable </label>
+	<input type="checkbox" ng-model="vis.params.zoomable" checked/>
+	<br />
+	
 	<label>Auto resize </label>
 	<input type="checkbox" ng-model="vis.params.autoresize" checked/>
 	<br />
 	<label>Vertical Scroll </label>
 	<input type="checkbox" ng-model="vis.params.verticalscroll" checked/>
 	<br />
-	-->
+	<br />
+	<label>Heigth (0=auto) </label>
+	<input type="number" min="0" value="0" ng-model="vis.params.chheigh" />
+	<br />
  
 </div>

@@ -104,9 +104,9 @@ function GanttVisProvider(Private) {
           //'date_histogram'
           'range'
         ],
-		defaults: [
-          { type: 'terms', schema: 'itembucket' }
-        ]
+		//defaults: [
+        // { type: 'terms', schema: 'itembucket' }
+        //]
       },
 	  {
         group: 'buckets',
@@ -123,9 +123,9 @@ function GanttVisProvider(Private) {
           //'date_histogram'
           'range'
         ],
-		defaults: [
-          { type: 'terms', schema: 'groupbucket' }
-        ]
+		//defaults: [
+        //  { type: 'terms', schema: 'groupbucket' }
+        //]
       }
     ])
   });
