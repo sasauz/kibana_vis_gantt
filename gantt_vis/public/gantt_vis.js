@@ -1,6 +1,7 @@
 import 'ui/agg_table';
 import 'ui/agg_table/agg_table_group';
 
+
 import 'plugins/gantt_vis/gantt_vis.less';
 import 'plugins/gantt_vis/gantt_vis_controller';
 import 'plugins/gantt_vis/gantt_vis_params';
