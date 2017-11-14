@@ -1,7 +1,6 @@
 import 'ui/agg_table';
 import 'ui/agg_table/agg_table_group';
 
-
 import 'plugins/gantt_vis/gantt_vis.less';
 import 'plugins/gantt_vis/gantt_vis_controller';
 import 'plugins/gantt_vis/gantt_vis_params';
@@ -41,6 +40,17 @@ function GanttVisProvider(Private) {
       editor: require('plugins/gantt_vis/gantt_vis_params.html')
     },
     schemas: new Schemas([
+      /*{
+        group: 'metrics',
+        name: 'metric',
+        title: 'Metric (Z Dimension)',
+        min: 1,
+        max: 2,
+        aggFilter: ['count', 'sum', 'min', 'max', 'avg'],
+        defaults: [
+          { type: 'count', schema: 'metric' }
+        ]
+      },*/
       {
         group: 'buckets',
         name: 'startbucket',
@@ -79,25 +89,6 @@ function GanttVisProvider(Private) {
           { type: 'date_histogram', schema: 'endbucket' }
         ]
       },
-	   {
-        group: 'buckets',
-        name: 'groupbucket',
-        title: 'Group By',
-		min: 0,
-		max: 1,
-        aggFilter: [
-		  'terms',
-          'significant_terms',
-          'filters',
-          //'date_range',
-          'histogram',
-          //'date_histogram'
-          'range'
-        ],
-		//defaults: [
-        //  { type: 'terms', schema: 'groupbucket' }
-        //]
-      },
 	  {
         group: 'buckets',
         name: 'itembucket',
@@ -116,9 +107,26 @@ function GanttVisProvider(Private) {
 		//defaults: [
         // { type: 'terms', schema: 'itembucket' }
         //]
+      },
+	  {
+        group: 'buckets',
+        name: 'groupbucket',
+        title: 'Group By',
+		min: 0,
+		max: 1,
+        aggFilter: [
+		  'terms',
+          'significant_terms',
+          'filters',
+          //'date_range',
+          'histogram',
+          //'date_histogram'
+          'range'
+        ],
+		//defaults: [
+        //  { type: 'terms', schema: 'groupbucket' }
+        //]
       }
-	  
-	  
     ])
   });
 }

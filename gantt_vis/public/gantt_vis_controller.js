@@ -3,7 +3,6 @@ import { uiModules } from 'ui/modules';
 import $ from 'jquery';
 const module = uiModules.get('kibana/gantt_vis', ['kibana']);
 
-
 import { DataSet, Timeline } from 'vis';
 
 module.controller('KbnGanttVisController', function ($scope, $element, Private) {

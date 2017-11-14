@@ -2,7 +2,6 @@ import _ from 'lodash';
 import { uiModules } from 'ui/modules';
 import ganttVisParamsTemplate from 'plugins/gantt_vis/gantt_vis_params.html';
 
-
 uiModules.get('kibana/gantt_vis')
   .controller('ganttVisParams', ['$scope', function ($scope) {
 
