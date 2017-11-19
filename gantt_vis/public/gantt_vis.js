@@ -27,30 +27,15 @@ function GanttVisProvider(Private) {
     //requiresTimePicker: true,
     params: {
       defaults: {
-        //graphSelect: 'surface',
-        //showPerspective: true,
-        //showGrid: true,
-        //showShadow: false,
-        //keepAspectRatio: true,
-        //setDotSize: false,
-        //xLabel: 'X',
-        //yLabel: 'Y',
-        //zLabel: 'Z'
+		  stacked: true,
+		  autoresize: true,	
+		  verticalscroll: false,
+		  movable: false,
+		  zoomable: false
       },
       editor: require('plugins/gantt_vis/gantt_vis_params.html')
     },
     schemas: new Schemas([
-      /*{
-        group: 'metrics',
-        name: 'metric',
-        title: 'Metric (Z Dimension)',
-        min: 1,
-        max: 2,
-        aggFilter: ['count', 'sum', 'min', 'max', 'avg'],
-        defaults: [
-          { type: 'count', schema: 'metric' }
-        ]
-      },*/
       {
         group: 'buckets',
         name: 'startbucket',
@@ -103,10 +88,10 @@ function GanttVisProvider(Private) {
           'histogram',
           //'date_histogram'
           'range'
-        ],
-		//defaults: [
-        // { type: 'terms', schema: 'itembucket' }
-        //]
+        ]/*,
+		defaults: [
+          { type: 'terms', schema: 'itembucket' }
+        ]*/
       },
 	  {
         group: 'buckets',
@@ -122,10 +107,10 @@ function GanttVisProvider(Private) {
           'histogram',
           //'date_histogram'
           'range'
-        ],
-		//defaults: [
-        //  { type: 'terms', schema: 'groupbucket' }
-        //]
+        ]/*,
+		defaults: [
+          { type: 'terms', schema: 'groupbucket' }
+        ]*/
       }
     ])
   });
