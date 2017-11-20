@@ -1,6 +1,8 @@
 # kibana_vis_gantt
 Kibana Plugin Gantt Chart
 
+![Gantt Chart in Kibana](Gantt.png "Gantt Chart in Kibana")
+
 # Install
 ```
 1. copy the gantt_vis folder into KIBANA_HOME/plugins
