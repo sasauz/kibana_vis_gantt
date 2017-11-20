@@ -7,7 +7,8 @@ Kibana Plugin Gantt Chart
 ```
 1. copy the gantt_vis folder into KIBANA_HOME/plugins
 2. cd KIBANA_HOME/plugins/gannt_vis
-3. npm install vis
+3. change version field in KIBANA_HOME/plugins/gannt_vis/package.json to your Kibana version
+4. npm install vis
 ```
 Nodejs will add dependeces into folder node_modules inside of gannt_vis
 ```
@@ -26,8 +27,9 @@ Nodejs will add dependeces into folder node_modules inside of gannt_vis
 # Offline-Install
 ```
 1. copy the gantt_vis folder into KIBANA_HOME/plugins
-2. copy node_modules folder from "offline" folder into KIBANA_HOME/plugins/gantt_vis
-3. run kibana
+2. change version field in KIBANA_HOME/plugins/gannt_vis/package.json to your Kibana version
+3. copy node_modules folder from "offline" folder into KIBANA_HOME/plugins/gantt_vis
+4. run kibana
 ```
 
 # Re-Install
